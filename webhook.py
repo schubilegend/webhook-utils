@@ -67,21 +67,25 @@ elif selection == "2":
 elif selection == "3": 
     webhook = input("Enter webhook URL: ")
     try:
-        response = requests.get(f"{webhook}")
 
-        data = response.json()
-        Name = str(data["name"])
-        ChannelID = str(data["channel_id"])
-        GuildID = str(data["guild_id"])
-        Token = str(data["token"])
-        Avatar = str(data["avatar"])
-        ID= str(data["id"])
-        print(f"Name: {Name}")
-        print(f"Channel ID: {ChannelID}")
-        print(f"Guild ID: {GuildID}")
-        print(f"Token: {Token} (Skids, This is useless)")
-        print(f"Avatar: {Avatar}")
-        print(f"ID: {ID}")
+        response = requests.get(f"{webhook}")
+        if response.status_code == 200:
+            print("Webhook valid! Getting info...")
+            data = response.json()
+            Name = str(data["name"])
+            ChannelID = str(data["channel_id"])
+            GuildID = str(data["guild_id"])
+            Token = str(data["token"])
+            Avatar = str(data["avatar"])
+            ID= str(data["id"])
+            print(f"Name: {Name}")
+            print(f"Channel ID: {ChannelID}")
+            print(f"Guild ID: {GuildID}")
+            print(f"Token: {Token} (Skids, This is useless)")
+            print(f"Avatar: {Avatar}")
+            print(f"ID: {ID}")
+        else:
+            print("Webhook doesnt exists anymore!")
     except:
         print("Error getting webhook info!")
 else:
