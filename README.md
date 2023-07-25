@@ -4,16 +4,16 @@
 
 # Features
 
-- Webhook spammer
+- **Webhook spammer**
   - Quick validation if webhook even exists
   - Set name of webhook
   - Set message to spam
   - Set amount of messages to spam
   - Set spam delay
   - Send TTS(Text-To-Speech) Messages
-- Webhook Deletor
+- **Webhook Deletor**
   - Quick validation if webhook even exists
-- Webhook Info getter
+- **Webhook Info getter**
   - Quick validation if webhook even exists
   - Get name of webhook
   - Get channel ID of webhook
