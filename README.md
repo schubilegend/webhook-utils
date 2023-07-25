@@ -11,8 +11,10 @@
   - Set amount of messages to spam
   - Set spam delay
   - Send TTS(Text-To-Speech) Messages
+  
 - ### Webhook Deletor
   - Quick validation if webhook even exists
+    
 - ### Webhook Info getter
   - Quick validation if webhook even exists
   - Get name of webhook
