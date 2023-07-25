@@ -26,7 +26,7 @@
 
 # Guide
 
-Just download the files from [Releases](https://github.com/Schubilegend/webhook-utils/archive/refs/heads/main.zip) and run the main.py.
+Just download the files from [here](https://github.com/Schubilegend/webhook-utils/archive/refs/heads/main.zip) and run the main.py.
 Everything else should be self explaining. If you still have any issues just join our [discord](https://discord.gg/cQuh6rvKBC) and create a support ticket.
 
 # How to use
