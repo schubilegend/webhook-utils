@@ -104,12 +104,16 @@ by Schubilegend
                 Token = str(data["token"])
                 Avatar = str(data["avatar"])
                 ID= str(data["id"])
+                
                 print(f"Name: {Name}")
                 print(f"Channel ID: {ChannelID}")
                 print(f"Guild ID: {GuildID}")
                 print(f"Token: {Token} (Skids, This is useless)")
                 print(f"Avatar: {Avatar}")
                 print(f"ID: {ID}")
+                
+                input("Hit enter to get back to the main menu.")
+                redirect_to_main_menu()
             else:
                 print("Webhook doesnt exists anymore!")
                 redirect_to_main_menu()
