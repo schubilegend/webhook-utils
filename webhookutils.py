@@ -74,7 +74,7 @@ by Schubilegend
                     print("Done!")
                     redirect_to_main_menu()
         else:
-            print("Invalid webhook!")
+            print("Invalid webhook! or you are being ratelimited")
             redirect_to_main_menu()
     def delete(self):
         webhook = input("Enter webhook URL: ")
@@ -88,7 +88,7 @@ by Schubilegend
                 print("Error deleting webhook!")
                 redirect_to_main_menu()
         else:
-            print("Invalid webhook!")
+            print("Invalid webhook! or you are being ratelimited")
             redirect_to_main_menu()
 
     def info(self):
@@ -116,7 +116,7 @@ by Schubilegend
                 input("Hit enter to get back to the main menu.")
                 redirect_to_main_menu()
             else:
-                print("Webhook doesnt exists anymore!")
+                print("Webhook doesnt exists anymore! or you are being ratelimited")
                 redirect_to_main_menu()
         except:
             print("Error getting webhook info!")
