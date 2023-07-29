@@ -67,12 +67,21 @@ by Schubilegend
             print("Webhook valid! Starting spam...")
             while amount != 0:
                 r = requests.post(webhook, data=data)
-                amount -= 1
-                print("Message sent! " + str(amount) + " Messages left!")
-                time.sleep(delay)
-                if amount == 0:
-                    print("Done!")
+                if r.status_code == 204:
+                    amount -= 1
+                    print("Message sent! " + str(amount) + " Messages left!")
+                    time.sleep(delay)
+                    if amount == 0:
+                        print("Done!")
+                        redirect_to_main_menu()
+                elif r.status_code == 429:
+                    print("Ratelimited! Retrying in 5 seconds...")
+                    time.sleep(5)
+                elif r.status_code == 404:
+                    print("Webhook doesnt exists anymore!")
                     redirect_to_main_menu()
+                else:
+                    print("Error sending message!")
         else:
             print("Invalid webhook! or you are being ratelimited")
             redirect_to_main_menu()
