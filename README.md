@@ -1,6 +1,7 @@
 # Webhook Utils
 ![alt text](https://r2.e-z.host/36e6f370-d26b-4fdf-a088-83e0c9a575e8/hxzu0f1q.png)
 
+## [Support Server](https://discord.gg/a7j2kJ9ktz)
 
 # Features
 
